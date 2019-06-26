@@ -1,0 +1,125 @@
+@font-face {
+    font-family: TStar;
+    src: url("/fonts/TSTAR-PRO-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: TStar;
+    font-weight: bold;
+    src: url("/fonts/TSTARMonoRound-Bold.otf") format("opentype");
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: TStar;
+    background: url("/img/back_green.png") center no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    margin: 20px;
+    border-radius: 10px;
+    background: white;
+    padding: 25px;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+}
+
+.wrapper>div {
+    width: 0px;
+}
+
+.left-pane>img {
+    height: 100px;
+}
+
+.left-pane {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.right-pane {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.mdc-text-field {
+    margin: 5px;
+}
+
+.login-button {
+    margin-top: 25px;
+    width: 200px;
+}
+
+.tab {
+    border-bottom: 2px solid #25ee32;
+    color: #25ee32;
+    padding: 3px;
+}
+
+.separator {
+    margin: 50px 0 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.separator hr {
+    width: 100%;
+}
+
+.separator span {
+    position: relative;
+    background: white;
+    top: -20px;
+    padding: 0 10px;
+}
+
+.alternative-credentials {
+    background: #25ee32;
+    margin: 10px;
+}
+
+@media (max-width: 930px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .wrapper>div {
+        width: auto;
+    }
+    .tab{
+        margin-top: 40px;
+    }
+    .credentials{
+        margin-top: 10px;
+    }
+    .separator{
+        margin: 20px 0 0 0;
+    }
+}

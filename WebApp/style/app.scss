@@ -1,0 +1,40 @@
+@font-face {
+    font-family: TStar;
+    src: url("/fonts/TSTAR-PRO-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: TStar;
+    font-weight: bold;
+    src: url("/fonts/TSTARMonoRound-Bold.otf") format("opentype");
+}
+
+$mdc-theme-primary: #25ee32;
+$mdc-theme-secondary: #212121;
+$mdc-typography-font-family: "TStar";
+
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+
+@import "./index.css";
+@import "@material/elevation/mdc-elevation";
+@import "@material/textfield/mdc-text-field";
+@import "@material/select/mdc-select";
+@import "@material/textfield/icon/mdc-text-field-icon";
+@import "@material/fab/mdc-fab";
+@import "@material/button/mdc-button";
+
+
+.mdc-text-field{
+    @include mdc-text-field-outline-shape-radius(4px, false);
+    @include mdc-text-field-caret-color(#212121);
+}
+
+.mdc-fab{
+    background: $mdc-theme-primary;
+}
+
+.mdc-fab span{
+    color: $mdc-theme-secondary;
+}
